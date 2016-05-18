@@ -15,15 +15,42 @@
 
 .title {
     color: #FCFCFC;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 600;
     margin-top: 10px;
 }
 
 .indicator {
-    margin-top: 11px;
+    margin-top: 13px;
+}
+
+.line {
+    width: calc(100% - 20px);
+    height: 1px;
+    margin: auto;
+    border: none;
+    border-bottom: 1px solid #5C5F65;
 }
 
 .list {
     height: calc(100% - 45px);
     overflow: auto;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+.item {
+    display: block;
+    height: 22px;
+}
+
+.propName,
+.propValue {
+    font-size: 13px;
+    font-weight: 600;
+    color: #B1B2B5;
+}
+
+.propValue {
+    font-weight: 100;
+    opacity: 0.8;
 }
