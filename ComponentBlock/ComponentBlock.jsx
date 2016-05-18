@@ -1,5 +1,5 @@
 import Colors from 'Constants.ts';
-import Indicator from 'Indicator.jsx';
+import Indicator from 'Indicator.js';
 import { floatRight } from 'Common.css';
 import styles from 'ComponentBlock.css';
 
@@ -19,7 +19,7 @@ const ComponentHeader = ({ title, statusColor }) => (
 		<Indicator 
 			color={ statusColor } 
 			radius="20" 
-			className={ floatRight }
+			className={ fRight }
 		/>
 	</div>
 )
@@ -52,12 +52,10 @@ class ComponentBlock extends Component {
 			status
 		} = this.props;
 
-		return (
-			<div>
+		return <div>
 				<ComponentHeader title={ title } statusColor={ colorMap(status) }>
 				<HR size="80">
 				<ComponentBody properties={ properties }>
-			</div>
-		)
+			</div>;
 	}
 }

@@ -1,0 +1,7 @@
+.fLeft :global {
+    float: left;
+}
+
+.fRight :global {
+    float: right;
+}
