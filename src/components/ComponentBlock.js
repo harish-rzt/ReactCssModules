@@ -1,9 +1,9 @@
 import React from 'react';
 import Indicator from './Indicator';
 import styles from './ComponentBlock.css';
-import { fLeft, fRight } from '../global.css'
+import {fLeft, fRight} from '../global.css'
 
-const ComponentHeader = ({ title, statusColor }) => (
+const ComponentHeader = ({title, statusColor}) => (
     <div className={ styles.header}>
         <h2 className={fLeft + " " + styles.title}>{ title }</h2>
         <Indicator
@@ -14,16 +14,16 @@ const ComponentHeader = ({ title, statusColor }) => (
     </div>
 );
 
-const ComponentProperty = ({ name, value }) => (
-    <li className={ styles.item }>
+const ComponentProperty = ({name, value}) => (
+    <li className={ styles.item } key={name}>
         <span className={fLeft + " " + styles.propName }>{ name }</span>
         <span className={fRight + " " + styles.propValue }>{ value }</span>
     </li>
 );
 
-const ComponentBody = ({ properties }) => (
+const ComponentBody = ({properties}) => (
     <ul className={ styles.list }>
-        { properties.map( ComponentProperty ) }
+        { properties.map(ComponentProperty) }
     </ul>
 );
 
@@ -36,16 +36,11 @@ export default class ComponentBlock extends React.Component {
     }
 
     render() {
+        let data = this.props.data;
         return <div className={fLeft + " " + styles.root}>
-            <ComponentHeader title="ActiveMQ-prod"  statusColor="green"/>
+            <ComponentHeader title={data.name} statusColor="green"/>
             <HR size="80"/>
-            <ComponentBody properties={ [
-                {name: "Memory", value: "16gb"},
-                {name: "Memory Used", value: "75%"},
-                {name:"Broker URL", value: "27.0.0.1:3245"},
-                {name: "Uptime", value: "15H"},
-                {name: "Validated", value: "Yes"}
-            ] }/>
+            <ComponentBody properties={data.properties }/>
         </div>;
     }
 
