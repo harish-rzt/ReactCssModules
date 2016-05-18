@@ -1,0 +1,58 @@
+<App>
+    <Sidebar>
+        <Page>
+            <InfrastructurePage>
+        </Page>
+</App>
+
+<Sidebar>
+    <Navigation>
+        <NavItem title="Explorer" img="explorer.png" />
+        <NavItem title="Explorer" img="explorer.png" />
+        <NavItem title="Explorer" img="explorer.png" />
+        <NavItem title="Explorer" img="explorer.png" />
+    </Navigation>
+    <ButtonGroup>
+        <Button name="Settings">
+            <Button name="Logout">
+    </ButtonGroup>
+</Sidebar>
+
+<InfrastructurePage>
+    <Header>
+        <TabGroup>
+            <Tab name="Software Components" active="true">
+                <SoftwareComponents/>
+            </Tab>
+            <Tab name="Infrastructure">
+                <InfrastructureComponents/>
+            </Tab>
+        </TabGroup>
+    </Header>
+</InfrastructurePage>
+
+<SoftwareComponents>
+    <ComponentGroup>
+        <ComponentTitle title="ActiveMQ Cluster">
+            <Scrollable direction="horizontal" height="200" width="1200">
+                <ComponentBlock title="ActiveMQ-Prod" properties={...} status="active"></ComponentBlock>
+            </Scrollable>
+    </ComponentGroup>
+</SoftwareComponents>
+
+<ComponentBlock>
+    <ComponentHeader>
+        <Title>
+            <Indicator color="green-hex" style={"height": "20px", "width": "20px"}>
+    </ComponentHeader>
+    <ComponentBody>
+        <ComponentProperty name={name} value={value}/>
+    </ComponentBody>
+</ComponentBlock>
+
+NavItem =>
+<Link>
+    <Icon url="explorer.png"/>
+    <span>{this.props.title}</span>
+</Link>
+
