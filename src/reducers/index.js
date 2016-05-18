@@ -1,24 +1,10 @@
-const initialState = [{
-    name: "ActiveMQ-prod",
-    properties: [{name: "Memory", value: "16gb"},
-        {name: "Memory Used", value: "75%"},
-        {name: "Broker URL", value: "27.0.0.1:3245"},
-        {name: "Uptime", value: "15H"},
-        {name: "Validated", value: "Yes"}]
-},
-    {
-        name: "ActiveMQ-prod2",
-        properties: [{name: "Memory", value: "16gb"},
-            {name: "Memory Used", value: "75%"},
-            {name: "Broker URL", value: "27.0.0.1:3245"},
-            {name: "Uptime", value: "15H"},
-            {name: "Validated", value: "Yes"}]
-    }];
+const initialState = [];
 
 export default function rootReducer(state = initialState, action) {
-
+    console.log("rootReducer", action)
     switch (action.type) {
-
+        case "LOAD":
+            return action.payload;
         default:
             return state;
 
