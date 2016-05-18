@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {render} from 'react-dom';
+import styles from './global.css';
 
 import App from './components/App.js';
 

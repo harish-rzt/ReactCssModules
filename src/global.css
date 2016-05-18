@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+.fLeft :global {
+    float: left;
+}
+
+.fRight :global {
+    float: right;
+}
