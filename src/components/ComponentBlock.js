@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import Indicator from './Indicator';
 import styles from './ComponentBlock.css';
-<<<<<<< Updated upstream
-import {fLeft, fRight} from '../global.css'
-=======
 import { fLeft, fRight } from '../global.css';
->>>>>>> Stashed changes
 
 const ComponentHeader = ({title, statusColor}) => (
     <div className={ styles.header}>
