@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Indicator from './Indicator';
 import styles from './ComponentBlock.css';
+<<<<<<< Updated upstream
 import {fLeft, fRight} from '../global.css'
+=======
+import { fLeft, fRight } from '../global.css';
+>>>>>>> Stashed changes
 
 const ComponentHeader = ({title, statusColor}) => (
     <div className={ styles.header}>
@@ -29,11 +33,7 @@ const ComponentBody = ({properties}) => (
 
 const HR = ({size}) => (<hr className={styles.line}/>);
 
-export default class ComponentBlock extends React.Component {
-
-    constructor(props, context) {
-        super(props, context);
-    }
+export default class ComponentBlock extends Component {
 
     render() {
         let data = this.props.data;

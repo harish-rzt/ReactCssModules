@@ -17,7 +17,13 @@ export default class App extends React.Component {
     render() {
         console.log("state", this.props.state)
         return <div>
+<<<<<<< Updated upstream
             {this.props.state.map(component=>(<ComponentBlock data={component} key={component.name}/>))}
+=======
+            <ComponentGroup>
+                <ComponentBlock/>
+            </ComponentGroup>
+>>>>>>> Stashed changes
         </div>;
     }
 }
