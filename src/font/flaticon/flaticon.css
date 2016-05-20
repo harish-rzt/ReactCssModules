@@ -1,5 +1,4 @@
-:global {
-    /*
+  /*
   Flaticon icon font: Flaticon
   Creation date: 19/05/2016 20:17
   */
@@ -36,4 +35,3 @@ margin-left: 20px;
 .flaticon-logout:before { content: "\f103"; }
 .flaticon-multimedia:before { content: "\f104"; }
 .flaticon-settings:before { content: "\f105"; }
-}
