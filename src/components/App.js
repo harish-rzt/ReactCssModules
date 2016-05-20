@@ -1,7 +1,8 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import ComponentBlock from './ComponentBlock';
-import {getComponents} from '../actions';
+import Page from './Page';
+import Sidebar from './Sidebar';
+import styles from './App.css';
+import { clearfix } from '../global.css';
 
 export default class App extends React.Component {
 
@@ -9,28 +10,15 @@ export default class App extends React.Component {
         super(props, context);
     }
 
-    componentDidMount(){
-        console.log("props", this.props)
-        this.props.dispatch(getComponents());
-    }
-
     render() {
-        console.log("state", this.props.state)
-        return <div>
-<<<<<<< Updated upstream
-            {this.props.state.map(component=>(<ComponentBlock data={component} key={component.name}/>))}
-=======
-            <ComponentGroup>
-                <ComponentBlock/>
-            </ComponentGroup>
->>>>>>> Stashed changes
+        console.log("state", this.props.state);
+        return <div className={ styles.root + " " + clearfix }>
+            <Sidebar />
+            <Page />
         </div>;
     }
+    
 }
-
-export default connect(
-    (state)=>({state})
-)(App);
 
 
 

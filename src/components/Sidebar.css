@@ -1,0 +1,12 @@
+.root {
+    height: 100%;
+    width: 100px;
+    background-color: #3A3E45;
+}
+
+.logo {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #E43747;
+}

@@ -19,6 +19,10 @@ module.exports = {
     module: {
         loaders: [
             {
+                test   : /\.(ttf|eot|otf|svg|png|gif|woff|jpeg(2)?)(\?[a-z0-9]+)?$/,
+                loader : 'file-loader'
+            },
+            {
                 test: /\.css$/,
                 loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
             },

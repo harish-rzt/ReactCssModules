@@ -1,5 +1,5 @@
 import React from 'react';
-import {basic} from './Indicator.css';
+import { basic } from './Indicator.css';
 
 const Indicator = ({ color, radius, style, className }) => {
 	return <span
@@ -8,7 +8,7 @@ const Indicator = ({ color, radius, style, className }) => {
 			...style, 
 			backgroundColor: color, 
 			width: `${radius}px`, 
-			height: `${radius}px`,
+			height: `${radius}px`
 		}}>
 	</span>
 };

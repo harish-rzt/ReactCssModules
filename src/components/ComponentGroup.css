@@ -1,0 +1,17 @@
+.root {
+
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    flex-direction: row;
+}
+
+.title {
+    font-size: 19px;
+    font-weight: 400;
+    color: #EBEBEC;
+    margin: 20px 0;
+}

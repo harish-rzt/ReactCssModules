@@ -1,6 +1,7 @@
 .root {
     width: 200px;
     height: 200px;
+    flex-shrink: 0;
     border-radius: 4px;
     margin-right: 25px;
     background-color: #42464D;

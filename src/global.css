@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    outline: none;
 }
 
 body {
@@ -14,10 +15,23 @@ ul {
     list-style: none;
 }
 
-.fLeft :global {
+button {
+    cursor: pointer;
+}
+
+.fLeft {
     float: left;
 }
 
-.fRight :global {
+.fRight {
     float: right;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+    min-height: 0;
+    overflow: hidden;
+    opacity: 0;
 }

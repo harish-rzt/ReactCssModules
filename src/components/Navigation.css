@@ -1,0 +1,32 @@
+.root {
+
+}
+
+.link {
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.link.active {
+    background-color: #3F444C;
+}
+
+.link.active:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 20px;
+    height: calc(100% - 40px);
+    width: 3px;
+    background: #E43747;
+}
+
+.linkIcon {
+
+}
+
+.linkTitle {
+
+}

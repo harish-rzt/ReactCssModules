@@ -1,11 +1,12 @@
 <App>
-    <Sidebar>
-        <Page>
-            <InfrastructurePage>
-        </Page>
+    <Sidebar />
+    <Page>
+        <InfrastructurePage />
+    </Page>
 </App>
 
 <Sidebar>
+    <Logo />
     <Navigation>
         <NavItem title="Explorer" img="explorer.png" />
         <NavItem title="Explorer" img="explorer.png" />
@@ -13,22 +14,21 @@
         <NavItem title="Explorer" img="explorer.png" />
     </Navigation>
     <ButtonGroup>
-        <Button name="Settings">
-            <Button name="Logout">
+        <Button name="Settings" />
+        <Button name="Logout" />
     </ButtonGroup>
 </Sidebar>
 
 <InfrastructurePage>
     <Header>
         <TabGroup>
-            <Tab name="Software Components" active="true">
-                <SoftwareComponents/>
-            </Tab>
-            <Tab name="Infrastructure">
-                <InfrastructureComponents/>
-            </Tab>
+            <Tab name="Software Components" active="true">{ name }</Tab>
+            <Tab name="Infrastructure">{ name }</Tab>
         </TabGroup>
     </Header>
+
+    <SoftwareComponents/>
+    <InfrastructureComponents/>
 </InfrastructurePage>
 
 <SoftwareComponents>
