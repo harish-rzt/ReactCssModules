@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Provider } from 'react-redux'
-import {render} from 'react-dom';
+import { render } from 'react-dom';
 import styles from './global.css';
 import fontStyles from './font/flaticon/flaticon.css';
 require ('./font/flaticon/flaticon.css');
@@ -11,7 +11,7 @@ import store from './createStore';
 const rootElement = document.getElementById('root');
 
 render(
-    <Provider store={store}>
+    <Provider store={ store }>
         <App/>
     </Provider>,
     rootElement

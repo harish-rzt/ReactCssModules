@@ -5,8 +5,10 @@ import { fLeft } from '../global.css';
 
 export default class Page extends React.Component {
     render() {
-        return <div className={ styles.root + " " + fLeft }>
-            <InfrastructurePage />
-        </div>
+        return (
+        	<div className={ styles.root + ' ' + fLeft }>
+	            <InfrastructurePage />
+	        </div>
+        )
     }
 };

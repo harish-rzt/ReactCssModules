@@ -1,16 +1,16 @@
-import React from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import ComponentBlock from './ComponentBlock';
-import {getComponents} from '../actions';
+import { getComponents } from '../actions';
 import styles from './ComponentGroup.css';
 import Scrollable from './Scrollable';
 import { clearfix } from '../global.css';
 
-const ComponentTitle = ({title}) => (
+const ComponentTitle = ({ title }) => (
     <h2 className={ styles.title }>{ title }</h2>
 );
 
-class ComponentGroup extends React.Component {
+class ComponentGroup extends Component {
 
     componentDidMount() {
         console.log("props", this.props)
@@ -18,10 +18,13 @@ class ComponentGroup extends React.Component {
     }
 
     render() {
-        return <div className={ clearfix + " " + styles.root}>
+        const state = this.props.state;
+        return <div className={ clearfix + " " + styles.root }>
             <ComponentTitle title="ActiveMQ Cluster"/>
             <Scrollable>
-                {this.props.state.map(component=>(<ComponentBlock data={component} key={component.name}/>))}
+                { 
+                    state.map( component => <ComponentBlock data={ component } key={ component.name }/> ) 
+                }
             </Scrollable>
         </div>
     }
@@ -29,5 +32,5 @@ class ComponentGroup extends React.Component {
 }
 
 export default connect(
-    (state)=>({state})
-)(ComponentGroup);
+    ( state ) => ({ state })
+)( ComponentGroup );

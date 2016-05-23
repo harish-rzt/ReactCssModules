@@ -3,12 +3,6 @@ import Tab from './Tab';
 import SoftwareComponents from './SoftwareComponents';
 import styles from './InfrastructurePage.css';
 
-const Header = () => (
-    <div className={ styles.header }>
-        <TabGroup />
-    </div>
-);
-
 const TabGroup = () => (
     <div className={ styles.tabGroup }>
         <Tab title="Software Components"
@@ -18,11 +12,19 @@ const TabGroup = () => (
     </div>
 );
 
+const Header = () => (
+    <div className={ styles.header }>
+        <TabGroup />
+    </div>
+);
+
 export default class InfrastructurePage extends React.Component {
     render () {
-        return <div className={ styles.root }>
-            <Header />
-            <SoftwareComponents />
-        </div>
+        return (
+            <div className={ styles.root }>
+                <Header />
+                <SoftwareComponents />
+            </div>
+        )
     }
 }
