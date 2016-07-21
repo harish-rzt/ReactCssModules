@@ -6,10 +6,18 @@
     display: block;
     width: 100px;
     height: 100px;
+    color: rgba(110, 113, 119, 0.5);
+    text-decoration: none;
     position: relative;
+    transition: color 0.15s ease-in;
+}
+
+.link:hover {
+    color: #E9E9EB;
 }
 
 .link.active {
+    color: #E9E9EB;
     background-color: #3F444C;
 }
 
@@ -24,9 +32,20 @@
 }
 
 .linkIcon {
+    display: block;
+    height: 65px;
+}
 
+.linkIcon:before {
+    font-size: 38px;
+    text-align: center;
+    display: block;
+    margin: 0;
+    padding-top: 20px;
 }
 
 .linkTitle {
-
+    font-size: 12px;
+    display: block;
+    text-align: center;
 }

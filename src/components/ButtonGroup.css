@@ -1,7 +1,20 @@
 .root {
-
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .button {
+    display: block;
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-top: 1px solid rgba(110, 113, 119, 0.5);
+    color: #6E7177;
+    background: none;
+}
 
+.button:hover {
+    color: #E9E9EB;
+    background-color: #3F444C;
 }
